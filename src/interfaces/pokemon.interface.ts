@@ -9,3 +9,10 @@ export interface PokemonListResponse {
     previous: string | null,
     results: IndexedPokemon[]
 }
+
+export interface ListPokemon {
+    name: string,
+    url: string,
+    image: string,
+    pokedexNumber: number
+}

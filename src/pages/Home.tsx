@@ -1,12 +1,15 @@
-import {Container} from '@mui/material'
+import {Container, Button} from '@mui/material'
 import PokemonList from "../components/PokemonList";
 import usePokemons from "../hooks/usePokemons.hooks";
 
 const Home = () => {
-    const {pokemons} = usePokemons()
+    const {pokemons, fetchNextPage, hasMorePage} = usePokemons()
 
     return (
         <Container>
+            {hasMorePage && (
+                <Button sx={{margin: 5}} variant='contained' onClick={fetchNextPage}>See More...</Button>
+            )}
             <PokemonList pokemons={pokemons} />
         </Container>
     )
