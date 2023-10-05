@@ -1,6 +1,6 @@
 import {Container, Button} from '@mui/material'
 import PokemonList from "../components/PokemonList";
-import usePokemons from "../hooks/usePokemons.hooks";
+import usePokemons from "../hooks/usePokemons.hook";
 
 const Home = () => {
     const {pokemons, fetchNextPage, hasMorePage} = usePokemons()
