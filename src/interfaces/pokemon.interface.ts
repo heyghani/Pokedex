@@ -60,3 +60,19 @@ export interface DetailPokemon {
     stats: PokemonStat[];
     color: string | null;
   }
+  
+  export interface IndexedType {
+    name: string;
+    url: string;
+    color: string;
+  }
+
+  export interface IndexedPokemonByType {
+    pokemon: IndexedPokemon;
+    slot: string;
+  }
+  
+  export interface PokemonByTypeListResponse {
+    id: number;
+    pokemon: IndexedPokemonByType[];
+  }
