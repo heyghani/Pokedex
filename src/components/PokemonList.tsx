@@ -12,7 +12,7 @@ const PokemonList = ({ pokemons }: PokemonListProps) => {
       {pokemons.length > 0 &&
         pokemons.map((item) => {
           return (
-            <Grid item xs={4}>
+            <Grid key={item.name} item xs={4}>
               <PokemonCard key={item.name} pokemon={item} />
             </Grid>
           );

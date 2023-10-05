@@ -45,7 +45,12 @@ const PokemonDetail = () => {
           )}
         </Grid>
         <Grid item>
-          <Button component={Link} to={"/"} variant="contained">
+          <Button
+            data-testid="btn-back"
+            component={Link}
+            to={"/"}
+            variant="contained"
+          >
             Back
           </Button>
         </Grid>

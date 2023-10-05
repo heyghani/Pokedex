@@ -32,6 +32,8 @@ const Home = () => {
         >
           {pokemonTypes.map((type) => (
             <Button
+              data-testid={`btn-${type.name}`}
+              key={type.name}
               variant="contained"
               sx={{
                 "&.MuiButton-contained": {
@@ -63,6 +65,7 @@ const Home = () => {
          
           {hasMorePage && (
             <Button
+              data-testid='btn-see-more'
               sx={{ margin: 5 }}
               variant="contained"
               onClick={fetchNextPage}
