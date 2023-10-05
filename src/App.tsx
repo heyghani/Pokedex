@@ -1,5 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
+import { ThemeProvider } from '@emotion/react';
+import theme from './theme';
+import { CssBaseline } from '@mui/material';
 
 const router = createBrowserRouter([
   {
@@ -10,7 +13,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 
